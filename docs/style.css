@@ -1,3 +1,21 @@
+@media print {
+    body, .slides-container {
+        overflow: visible !important;
+        display: block !important;
+        transform: none !important;
+    }
+    section {
+        display: block !important;
+        min-width: 100% !important;
+        height: 100vh !important;
+        page-break-after: always !important; 
+        break-after: page !important;
+        padding: 2rem !important;
+    }
+    .nav-controls, .progress-bar {
+        display: none !important; 
+    }
+}
 
 :root {
     --primary: #4f46e5;
