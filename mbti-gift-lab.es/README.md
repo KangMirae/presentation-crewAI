@@ -20,11 +20,11 @@ CrewAI orquesta multiples **Agentes** de IA, cada uno con un rol, objetivo e his
 Entrada del Usuario (MBTI)
       │
       ▼
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+┌──────────────┐     ┌───────────────┐     ┌───────────────┐
 │  Lluvia de   │ ──▶ │   Critica     │ ──▶ │   Refinar     │
 │    Ideas     │     │  (Selector)   │     │  (Listador)   │
 │ (Listador)   │     │               │     │               │
-└──────────────┘     └──────────────┘     └──────────────┘
+└──────────────┘     └───────────────┘     └───────────────┘
                                                 │
                                                 ▼
                                         regalos_finales.md

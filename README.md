@@ -54,10 +54,10 @@ A minimal, working crewAI project that demonstrates the concepts from the slides
 User Input (MBTI)
       │
       ▼
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
 │  Brainstorm  │ ──▶ │   Critique   │ ──▶ │   Refine     │
 │ (List Maker) │     │   (Picker)   │     │ (List Maker) │
-└─────────────┘     └─────────────┘     └─────────────┘
+└──────────────┘     └──────────────┘     └──────────────┘
                                                │
                                                ▼
                                         final_gifts.md

@@ -54,11 +54,11 @@ Un proyecto crewAI minimo y funcional que demuestra los conceptos de las diaposi
 Entrada del Usuario (MBTI)
       │
       ▼
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+┌──────────────┐     ┌───────────────┐     ┌───────────────┐
 │  Lluvia de   │ ──▶ │   Critica     │ ──▶ │   Refinar     │
 │    Ideas     │     │  (Selector)   │     │  (Listador)   │
 │ (Listador)   │     │               │     │               │
-└──────────────┘     └──────────────┘     └──────────────┘
+└──────────────┘     └───────────────┘     └───────────────┘
                                                 │
                                                 ▼
                                          final_gifts.md

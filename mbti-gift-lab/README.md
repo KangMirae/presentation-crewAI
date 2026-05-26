@@ -20,10 +20,10 @@ CrewAI orchestrates multiple AI **Agents**, each with a defined role, goal, and 
 User Input (MBTI)
       │
       ▼
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
 │  Brainstorm  │ ──▶ │   Critique   │ ──▶ │   Refine     │
 │ (List Maker) │     │   (Picker)   │     │ (List Maker) │
-└─────────────┘     └─────────────┘     └─────────────┘
+└──────────────┘     └──────────────┘     └──────────────┘
                                                │
                                                ▼
                                         final_gifts.md
