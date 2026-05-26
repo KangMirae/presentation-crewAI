@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentacion crewAI</title>
+    <link rel="stylesheet" href="../docs/style.css">
+    <script src="../docs/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="progress-bar" id="progress"></div>
+
+    <div class="slides-container" id="slider">
+        
+        <!-- Pagina 1: Titulo -->
+        <section>
+            <h3>Introduccion</h3>
+            <h1>crewAI</h1>
+            <p>Orquestando Agentes de IA Autonomos con Roles</p>
+        </section>
+
+        <!-- Pagina 2: Que es un Agente de IA -->
+        <section>
+            <h2>Que es un Agente de IA?</h2>
+            <p>Una entidad autonoma que usa Modelos de Lenguaje (LLMs) para razonar, usar herramientas y completar tareas complejas para lograr un objetivo especifico.</p>
+        </section>
+
+        <!-- Pagina 3: Tipos -->
+        <section>
+            <h2>Tipos de Agentes de IA</h2>
+            <p>Segun IBM, los agentes van desde sistemas reflejos simples hasta sistemas de aprendizaje complejos.</p>
+            <div class="grid-2">
+                <div class="card">
+                    <ul style="font-size: 1.1rem;">
+                        <li>Agentes Reflejos Simples</li>
+                        <li>Agentes Reflejos Basados en Modelo</li>
+                        <li>Agentes Basados en Objetivos</li>
+                        <li>Agentes Basados en Utilidad</li>
+                        <li>Agentes de Aprendizaje</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <p style="font-size: 1.2rem;"><strong>crewAI</strong> se enfoca principalmente en la colaboracion <strong>Basada en Objetivos</strong> y <strong>Basada en Utilidad</strong>.</p>
+                </div>
+            </div>
+            <a href="https://www.ibm.com/think/topics/ai-agent-types" class="link-hint">Fuente: IBM Think Topics</a>
+        </section>
+
+        <!-- Pagina 4: Individual vs Multi -->
+        <section>
+            <h2>Agente Individual vs. Multi-Agente</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Un Solo LLM</h3>
+                    <p style="font-size: 1.1rem;">Pedirle a una sola persona que haga todo (Investigar, Analizar, Escribir, Revisar).</p>
+                </div>
+                <div class="card">
+                    <h3>Multi-Agente (crewAI)</h3>
+                    <p style="font-size: 1.1rem;">Asignar tareas a agentes especializados que colaboran como un equipo profesional.</p>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem; width: 100%; max-width: 1000px;">
+                <p><strong>Analogia:</strong> Una <strong>Redaccion de Noticias</strong> profesional. Tienes un Reportero, un Editor y un Verificador de datos trabajando juntos, en lugar de un solo blogger intentando hacerlo todo.</p>
+            </div>
+        </section>
+
+        <!-- Pagina 5: Ejemplo de Colaboracion -->
+        <section>
+            <h2>Colaboracion de Agentes</h2>
+            <div class="collaboration-container">
+                <!-- 1. Entrada -->
+                <div class="node-v2">
+                    <h4>Entrada</h4>
+                    <strong>Objetivo Comun</strong>
+                    <p>Analizar tendencias e informar</p>
+                </div>
+
+                <div class="arrow-h">&rarr;</div>
+
+                <!-- 2. Orquestacion -->
+                <div class="node-v2 crew-core">
+                    <h4>Crew</h4>
+                    <strong>Orquestador</strong>
+                    <p>Gestiona el Proceso</p>
+                </div>
+
+                <div class="arrow-h">&rarr;</div>
+
+                <!-- 3. Agentes -->
+                <div class="node-v2 agent-box">
+                    <h4>Agente: Investigador</h4>
+                    <strong>Tarea: Buscar</strong>
+                    <p>Reunir 5 tendencias clave</p>
+                    <span class="tool-tag-v2">Busqueda Web</span>
+                </div>
+
+                <div class="seq-connector">
+                    <span>&rarr;</span>
+                    <span>Salida</span>
+                </div>
+
+                <div class="node-v2 agent-box">
+                    <h4>Agente: Escritor</h4>
+                    <strong>Tarea: Contenido</strong>
+                    <p>Redactar informe profesional</p>
+                    <span class="tool-tag-v2">Escribir Archivo</span>
+                </div>
+
+                <div class="arrow-h">&rarr;</div>
+
+                <!-- 4. Entregable -->
+                <div class="node-v2 final-node">
+                    <strong style="color: #10b981; margin:0; font-size: 0.9rem;">Entregable Final</strong>
+                </div>
+            </div>
+
+            <p style="font-size: 1.1rem; margin-top: 20px;">Las salidas de la tarea de un agente fluyen directamente a la entrada del siguiente agente.</p>
+        </section>
+
+        <!-- Pagina 6: Comportamiento -->
+        <section>
+            <h2>Comportamiento Autonomo</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Auto-Correccion</h3>
+                    <p style="font-size: 1.1rem;">Los agentes pueden darse cuenta de errores y re-ejecutar herramientas para encontrar la respuesta correcta.</p>
+                </div>
+                <div class="card">
+                    <h3>Escalabilidad</h3>
+                    <p style="font-size: 1.1rem;">Agrega facilmente mas agentes especializados para manejar una complejidad creciente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagina 7: Como funciona -->
+        <section>
+            <h2>Como Funciona crewAI</h2>
+            <p>Construido sobre <strong>LangChain</strong> con un principio de diseno modular.</p>
+            <div class="grid-2">
+                <div class="card">
+                    <p>Componentes Principales:</p>
+                    <ul style="font-size: 1rem;">
+                        <li><strong>Agents:</strong> Los trabajadores especializados.</li>
+                        <li><strong>Tasks:</strong> Las asignaciones.</li>
+                        <li><strong>Tools:</strong> El equipamiento (Busqueda web, APIs).</li>
+                        <li><strong>Process:</strong> El flujo de trabajo (Secuencial/Jerarquico).</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <p>Basicamente, defines el "Quien", "Que" y "Como", y luego el <strong>Crew</strong> gestiona la ejecucion.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagina 8: Intro Conceptos Clave -->
+        <section>
+            <h2>Conceptos Clave</h2>
+            <div class="concept-equation">
+                <!-- Agent -->
+                <div class="concept-card">
+                    <h3>Agent</h3>
+                    <p>El "Quien"<br>Rol e Historia</p>
+                </div>
+
+                <div class="operator">+</div>
+
+                <!-- Task -->
+                <div class="concept-card">
+                    <h3>Task</h3>
+                    <p>El "Que"<br>Objetivo Especifico</p>
+                </div>
+
+                <div class="operator">+</div>
+
+                <!-- Tool -->
+                <div class="concept-card">
+                    <h3>Tool</h3>
+                    <p>El "Como"<br>Capacidades</p>
+                </div>
+
+                <div class="operator">=</div>
+
+                <!-- Crew -->
+                <div class="concept-card result">
+                    <h3>The Crew</h3>
+                    <p>La Colaboracion y el Proceso</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagina 9: Detalle del Agent -->
+        <section>
+            <h2>El Agent</h2>
+            <p>"Quien hace el trabajo?" — Piensa en ello como una Descripcion de Puesto.</p>
+            <pre>
+<span class="yaml-key">researcher:</span>
+  <span class="yaml-key">role:</span> <span class="yaml-str">"Investigador Senior de Datos de {topic}"</span>
+  <span class="yaml-key">goal:</span> <span class="yaml-str">"Descubrir desarrollos de vanguardia en {topic}"</span>
+  <span class="yaml-key">backstory:</span> <span class="yaml-str">"Eres un investigador experimentado con talento..."</span></pre>
+        </section>
+
+        <!-- Pagina 10: Detalle del Task -->
+        <section>
+            <h2>El Task</h2>
+            <p>"Que hay que hacer?" — Debe asignarse a un agente.</p>
+            <pre>
+<span class="yaml-key">research_task:</span>
+  <span class="yaml-key">description:</span> <span class="yaml-str">"Realizar una investigacion exhaustiva sobre {topic}..."</span>
+  <span class="yaml-key">expected_output:</span> <span class="yaml-str">"Una lista con 10 puntos."</span>
+  <span class="yaml-key">agent:</span> <span class="yaml-val">researcher</span></pre>
+        </section>
+
+        <!-- Pagina 11: Detalle del Tool -->
+        <section>
+            <h2>El Tool</h2>
+            <p>"Que recursos pueden usar?"</p>
+            <ul style="max-width: 700px;">
+                <li><strong>Capacidades:</strong> Busqueda Web, Lectura/Escritura de Archivos, llamadas a APIs.</li>
+                <li><strong>Accion:</strong> Sin herramientas, los agentes solo pueden "pensar" (razonar). Con herramientas, pueden "actuar".</li>
+                <li><strong>Personalizacion:</strong> Usa herramientas integradas o crea tus propias herramientas personalizadas en Python.</li>
+            </ul>
+        </section>
+
+        <!-- Pagina 12: Detalle del Crew -->
+        <section>
+            <h2>El Crew</h2>
+            <p>"Como opera el equipo?"</p>
+            <div class="card">
+                <ul>
+                    <li><strong>Orquestacion:</strong> Coordina agentes y tareas.</li>
+                    <li><strong>Procesos:</strong> 
+                        <br>- <u>Secuencial</u>: Paso a paso (A &rarr; B &rarr; C)
+                        <br>- <u>Jerarquico</u>: Un agente Manager delega el trabajo.
+                    </li>
+                    <li><strong>Kickoff:</strong> Inicia el proceso con entradas para obtener el resultado final.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Pagina 13: Casos de Uso -->
+        <!-- <section>
+            <h2>Casos de Uso de crewAI</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Analisis Financiero</h3>
+                    <p style="font-size: 1rem;">Investigacion del mercado de valores, analisis de sentimiento y generacion de informes.</p>
+                </div>
+                <div class="card">
+                    <h3>Creacion de Contenido</h3>
+                    <p style="font-size: 1rem;">Investigar un tema para blog, redactar y editar SEO.</p>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Pagina 14: Herramientas Similares -->
+        <section>
+            <h2>Herramientas Similares</h2>
+            <div class="grid-2" style="text-align: center;">
+                <div class="card">
+                    <h3>Microsoft AutoGen</h3>
+                    <p style="font-size: 1rem;">Agentes conversacionales basados en eventos.</p>
+                    <a href="https://microsoft.github.io/autogen/stable/" target="_blank" style="font-size: 0.9rem; color: #6b7280;">https://microsoft.github.io/autogen/stable/</a>
+                </div>
+                <div class="card">
+                    <h3>ChatDev</h3>
+                    <p style="font-size: 1rem;">Simulacion de empresa de software virtual.</p>
+                    <a href="https://chatdev.ai/" target="_blank" style="font-size: 0.9rem; color: #6b7280;">https://chatdev.ai/</a>
+                </div>
+            </div>
+            <p style="margin-top: 2rem;"><strong>crewAI</strong> destaca por su enfoque <u>orientado a procesos</u> y su modularidad <u>lista para produccion</u>.</p>
+        </section>
+
+    </div>
+
+    <div class="nav-controls">
+        <button onclick="moveSlide(-1)">&larr;</button>
+        <button onclick="moveSlide(1)">&rarr;</button>
+    </div>
+</body>
+</html>
