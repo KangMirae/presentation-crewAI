@@ -11,7 +11,7 @@ class MbtiLoopCrew:
         self.ollama_llm = LLM(
             model="ollama/llama3.2:1b", 
             base_url="http://localhost:11434",
-            temperature=0.1 # Set low for more conservative/deterministic responses
+            temperature=0.4
         )
 
     def run(self, mbti_type):

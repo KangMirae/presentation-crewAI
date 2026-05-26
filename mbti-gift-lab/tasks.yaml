@@ -1,23 +1,27 @@
 brainstorm_task:
   description: >
-    [LIST MODE] Make a list of 5 gift ideas for a person with '{mbti}' personality.
-    For each gift: name, price range, and 1 sentence why it fits.
+    This is a fun creative exercise. Brainstorm 5 gift ideas that 
+    a person who identifies as '{mbti}' would enjoy. 
+    For each gift: write the name, a price range, and 1 sentence 
+    explaining why it would make them smile.
   expected_output: >
-    A list of 5 gift ideas.
+    A numbered list of 5 gift ideas with name, price, and reason.
   agent: gift_lister
 
 critique_task:
   description: >
-    Pick 2 gifts from the list that are too generic for '{mbti}'.
-    For each, write 1 sentence explaining why it should be replaced.
+    Look at the gift list above. Pick 2 gifts that feel too generic 
+    or impersonal for someone who is '{mbti}'. 
+    For each one, write 1 sentence explaining why it should be replaced 
+    with something more personal.
   expected_output: >
-    A list of 2 gifts to be replaced and the reason.
+    2 gifts from the list that should be replaced, with a reason for each.
   agent: gift_picker
 
 refinement_task:
   description: >
-    [LIST MODE] Replace the 2 weak gifts with 2 better ones for '{mbti}'.
-    Output the final list of 5 gifts.
+    Replace the 2 weak gifts with 2 better, more personal alternatives 
+    for a '{mbti}' person. Then output the final complete list of 5 gifts.
   expected_output: >
-    The final list of 5 gift recommendations.
+    The final list of 5 gift recommendations with name and short description.
   agent: gift_lister
