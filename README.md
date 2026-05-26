@@ -15,7 +15,7 @@ An educational repository for learning **crewAI** — a Python framework for orc
 
 ```
 .
-├── src/                  # Slide presentation (HTML/CSS/JS)
+├── docs/                  # Slide presentation (HTML/CSS/JS)
 │   ├── index.html        # Presentation slides
 │   ├── style.css         # Slide styling
 │   └── script.js         # Navigation logic
@@ -34,7 +34,7 @@ An educational repository for learning **crewAI** — a Python framework for orc
 
 This repo has two parts that work together:
 
-### 1. Presentation (`src/`)
+### 1. Presentation (`docs/`)
 
 A browser-based slide deck that covers:
 
@@ -44,7 +44,7 @@ A browser-based slide deck that covers:
 - How agents collaborate in a sequential workflow
 - Comparison with similar tools (AutoGen, ChatDev)
 
-Open `src/index.html` in any browser to view.
+Open `docs/index.html` in any browser to view.
 
 ### 2. Demo Project (`mbti-gift-lab/`)
 
